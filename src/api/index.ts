@@ -1,6 +1,6 @@
 import request from '@/service'
 import config from '@/utils/config'
-import configData from './config'
+import configData from '../../public/config'
 export default {
   /* 1、登录 */
   login: data =>

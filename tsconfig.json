@@ -17,12 +17,7 @@
       "@/*": ["src/*"],
       "#/*": ["types/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "src/**/*.ts",
@@ -31,11 +26,8 @@
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "types/**/*.d.ts",
-    "types/**/*.ts"
+    "types/**/*.ts",
+    "public/config.js"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.js"
-  ]
+  "exclude": ["node_modules", "dist", "**/*.js"]
 }
