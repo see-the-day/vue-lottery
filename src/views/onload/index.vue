@@ -4,7 +4,6 @@
     <el-steps :active="activeStep" finish-status="success">
       <el-step title="数据获取中..." :description="`共计获取 ${userNum}条`"></el-step>
       <el-step title="存储数据中..." :description="`共计插入 ${cacheNum}条`"></el-step>
-      <el-step title="缓存头像中..." :description="`共计缓存 ${catchImg}张`"></el-step>
       <el-step
         :title="`数据校验${step.title}`"
         :status="step.status"
@@ -34,9 +33,7 @@ export default {
 
     const { deleteDB, initDB } = useDB()
 
-    const { data, step, stop, userNum, catchImg, classStop, preLoadImg, validateData } = useOnload({
-      cacheNum
-    })
+    const { data, step, stop, userNum, classStop } = useOnload()
     const router = useRouter()
 
     const ready = async function () {
@@ -53,12 +50,8 @@ export default {
         cacheNum.value = resUser
         activeStep.value = 2
 
-        // 1.1.3.缓存头像
-        await preLoadImg()
         activeStep.value = 3
 
-        // 1.1.4.校验数据
-        await validateData()
         router.push({ path: '/lottery' })
       } catch (error) {
         // 1.1.5.捕获错误
@@ -79,7 +72,6 @@ export default {
       stop,
       userNum,
       cacheNum,
-      catchImg,
       classStop
     }
   }
