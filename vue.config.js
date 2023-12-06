@@ -51,7 +51,7 @@ module.exports = {
   },
   // 服务代理配置
   devServer: {
-    open: false, // 是否自启浏览器
+    open: true, // 是否自启浏览器
     host: '0.0.0.0',
     port,
     https: false,

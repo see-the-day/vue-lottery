@@ -1,6 +1,6 @@
 import request from '@/service'
 import config from '@/utils/config'
-
+import configData from './config'
 export default {
   /* 1、登录 */
   login: data =>
@@ -18,11 +18,13 @@ export default {
     }),
 
   /* 3、获取数据 */
-  getData: () =>
-    request({
-      method: 'get',
-      url: config.onload.url
-    }),
+  getData: () => {
+    return new Promise(res => res(configData))
+  },
+  // request({
+  //   method: 'get',
+  //   url: config.onload.url
+  // }),
 
   /* 4、回传抽中数据 */
   postData: data =>

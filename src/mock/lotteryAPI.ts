@@ -42,12 +42,10 @@ const getUserData = function (limit) {
 
 // 奖项类别
 const type: TypeItem[] = [
-  { value: '9', label: '特等奖', number: '3' },
-  { value: '1', label: '一等奖', number: '5' },
-  { value: '2', label: '二等奖', number: '12' },
-  { value: '3', label: '三等奖', number: '20' },
-  { value: '4', label: '参与奖', number: '28' },
-  { value: '5', label: '其他', number: '' }
+  { value: '9', label: '特等奖', number: '2' },
+  { value: '1', label: '一等奖', number: '2' },
+  { value: '2', label: '二等奖', number: '5' },
+  { value: '3', label: '三等奖', number: '10' }
 ]
 
 export default {

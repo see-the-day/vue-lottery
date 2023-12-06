@@ -23,7 +23,7 @@ export const useOnloadStore = defineStore({
     async getDatas() {
       try {
         const res = await api.getData()
-        this.SET_DATA(res.data)
+        this.SET_DATA((res as any).data)
         return res
       } catch (error) {
         throw error

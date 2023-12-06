@@ -50,7 +50,7 @@ export const useLottery = function ({
         }
       })
       const tempRoll = userData.value.length - total.value
-      if (tempRoll <= maxTimes.value) {
+      if (tempRoll < maxTimes.value) {
         alert(`池内剩余总数${tempRoll}，不够本次抽取${maxTimes.value}！`)
         return false
       }

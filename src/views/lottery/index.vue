@@ -10,16 +10,11 @@
           <ul>
             <li class="lottery-item" v-for="(list, index) in rollIdArr" :key="index">
               <div class="lottery-roll">
-                <!-- 注意：若图片出现跨域情况，须配置cors，否则会截图失败 -->
-                <div class="roll-item"><img :src="list.HeadImg" /></div>
                 <div class="roll-item">
-                  <span>{{ list.Num }}</span>
+                  <span>{{ list.Company }}</span>
                 </div>
                 <div class="roll-item">
                   <span>{{ list.Name }}</span>
-                </div>
-                <div class="roll-item">
-                  <span>{{ list.Company }}</span>
                 </div>
               </div>
             </li>
@@ -63,9 +58,6 @@
             </el-select>
           </el-form-item>
         </el-form>
-      </div>
-      <div v-if="rule.show" class="lottery-rule">
-        <img :src="rule.img" />
       </div>
       <div v-if="music.show" :class="classMusic" @click="toggleMusic">
         <div class="music-btn"></div>
