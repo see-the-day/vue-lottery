@@ -1,6 +1,5 @@
 import request from '@/service'
 import config from '@/utils/config'
-import configData from '../../public/config'
 export default {
   /* 1、登录 */
   login: data =>
@@ -19,7 +18,7 @@ export default {
 
   /* 3、获取数据 */
   getData: () => {
-    return new Promise(res => res(configData))
+    return new Promise(res => res(window.configData))
   },
   // request({
   //   method: 'get',

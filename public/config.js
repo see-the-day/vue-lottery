@@ -1,4 +1,4 @@
-export default {
+window.configData = {
   data: {
     // 用户
     userData: [

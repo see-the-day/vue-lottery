@@ -12,4 +12,5 @@ declare type Recordable<T = any> = Record<string, T>
 
 declare interface Window {
   SERVER_CONFIG: any
+  configData: any
 }
