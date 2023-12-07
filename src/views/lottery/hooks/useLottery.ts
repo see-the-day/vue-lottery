@@ -3,7 +3,7 @@ import { useLotteryStore } from '@/store/modules/lottery'
 import { useAppStore } from '@/store/modules/app'
 import { storeToRefs } from 'pinia'
 
-import screenshot from '@/utils/screenshot'
+// import screenshot from '@/utils/screenshot'
 import { alert } from '@/utils/element-plus'
 
 let timeInterJS // 滚动定时器对象
@@ -20,7 +20,7 @@ export const useLottery = function ({
 }) {
   const isBegin = ref(false) // 是否开始
   const lotteryStore = useLotteryStore()
-  const { intervalTime, download, style } = storeToRefs(lotteryStore)
+  const { intervalTime, style } = storeToRefs(lotteryStore)
 
   const total = ref(0) // 累计所有抽中用户数
   // 1.开始滚动
@@ -76,11 +76,11 @@ export const useLottery = function ({
     // 3.1更新已抽中人数数目
     rollLen.value += rollIdArr.value.length
     // 3.2延迟时间后执行截屏下载，应为渲染是结果是异步的，需要时间
-    if (download.value.show) {
-      setTimeout(() => {
-        screenshot(maxAward.value, maxNum.value)
-      }, download.value.delay)
-    }
+    // if (download.value.show) {
+    //   setTimeout(() => {
+    //     screenshot(maxAward.value, maxNum.value)
+    //   }, download.value.delay)
+    // }
     // 3.3回传中奖数据
     const temp = rollIdArr.value.map(item => item.Num).join(',')
     lotteryStore.postDatas({ Num: temp, Award: maxAward.value }).then(() => {

@@ -1,10 +1,19 @@
+/**
+ * 只需要对 userData 及type内容进行增删或者修改
+ * userData
+ *  只需要修改Name跟CompleteID字段
+ *  CompleteID 需要不与其他数据重复
+ *  Name 为抽奖用户名
+ * type
+ *  value为数字且不能与其他数据重复
+ *  label为当前奖项名字
+ *  number为当前奖项抽取人数
+ */
+
 window.configData = {
   data: {
     // 用户
     userData: [
-      { Company: '', CompleteID: '1', Name: '常万宏', OpenID: '1', Award: '0' },
-      { Company: '', CompleteID: '2', Name: '崔磊', OpenID: '1', Award: '0' },
-      { Company: '', CompleteID: '3', Name: '常万青', OpenID: '1', Award: '0' },
       { Company: '', CompleteID: '4', Name: '姜林', OpenID: '1', Award: '0' },
       { Company: '', CompleteID: '5', Name: '李杰', OpenID: '1', Award: '0' },
       { Company: '', CompleteID: '6', Name: '陈茜', OpenID: '1', Award: '0' },
